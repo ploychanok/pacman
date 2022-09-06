@@ -43,17 +43,26 @@ $yellow: yellow;
 .key {
   border: 2px solid $dark;
   box-shadow: 2px 2px $dark;
-  font-size: 0.85em;
-  line-height: 0.85em;
+  font-size: 0.85rem;
   display: inline-block;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
   padding: 4px 30px;
   margin: 3px;
   white-space: nowrap;
+  text-align: center;
 
   &.active {
     background-color: $yellow;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-transform: uppercase;
+    font-family: BDCartoonShoutRegular;
   }
 }
 

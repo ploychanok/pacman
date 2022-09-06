@@ -36,16 +36,23 @@ a {
 .key {
   border: 2px solid #000000;
   box-shadow: 2px 2px #000000;
-  font-size: 0.85em;
-  line-height: 0.85em;
+  font-size: 0.85rem;
   display: inline-block;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
   padding: 4px 30px;
   margin: 3px;
-  white-space: nowrap; }
+  white-space: nowrap;
+  text-align: center; }
   .key.active {
     background-color: yellow; }
+  .key span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-transform: uppercase;
+    font-family: BDCartoonShoutRegular; }
 
 .col {
   display: flex;
