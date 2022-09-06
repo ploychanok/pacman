@@ -470,14 +470,6 @@ Pacman.User = function (game, map) {
     return rem > 3 || rem < 7;
   }
 
-  /**
-   * It returns an object with the start and end angles of the arc to be drawn, and a boolean
-   * indicating whether the arc should be drawn clockwise or counter-clockwise
-   * @param dir - The direction the player is moving in.
-   * @param pos - The position of the player
-   * @returns An object with the start and end angles for the arc and a boolean value for the direction
-   * of the arc.
-   */
   function calcAngle(dir, pos) {
     if (dir == RIGHT && pos.x % 10 < 5) {
       styleKeypress("right");
@@ -510,6 +502,29 @@ Pacman.User = function (game, map) {
         key.classList.add("active");
       }
     }
+
+    logDirection(dir);
+  }
+
+  const dirArr = [];
+  function logDirection(dir) {
+    dirArr.push(dir);
+
+    /* Removing duplicate values from an array. */
+    for (i = dirArr.length - 1; i > 0; i--) {
+      if (i <= dirArr.length && dirArr[i] === dirArr[i - 1]) {
+        dirArr.splice(i, 1);
+      }
+    }
+
+    console.log(dirArr);
+  }
+
+  function storeDirection(obj) {
+    // let objects = obj;
+    // localStorage.setItem("Directions", JSON.stringify(objects));
+    // let retrievedObject = localStorage.getItem("objects");
+    // console.log("retrievedObject: ", JSON.parse(retrievedObject));
   }
 
   function drawDead(ctx, amount) {
