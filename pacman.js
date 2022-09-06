@@ -480,16 +480,16 @@ Pacman.User = function (game, map) {
    */
   function calcAngle(dir, pos) {
     if (dir == RIGHT && pos.x % 10 < 5) {
-      logDirection("right");
+      styleKeypress("right");
       return { start: 0.25, end: 1.75, direction: false };
     } else if (dir === DOWN && pos.y % 10 < 5) {
-      logDirection("down");
+      styleKeypress("down");
       return { start: 0.75, end: 2.25, direction: false };
     } else if (dir === UP && pos.y % 10 < 5) {
-      logDirection("up");
+      styleKeypress("up");
       return { start: 1.25, end: 1.75, direction: true };
     } else if (dir === LEFT && pos.x % 10 < 5) {
-      logDirection("left");
+      styleKeypress("left");
       return { start: 0.75, end: 1.25, direction: true };
     }
     return { start: 0, end: 2, direction: false };
@@ -500,7 +500,7 @@ Pacman.User = function (game, map) {
    * the one that matches the direction
    * @param dir - The direction of the key that was pressed.
    */
-  function logDirection(dir) {
+  function styleKeypress(dir) {
     const keys = document.getElementsByClassName("key");
 
     for (const key of keys) {

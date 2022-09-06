@@ -43,8 +43,7 @@ a {
   letter-spacing: 0.05em;
   padding: 4px 30px;
   margin: 3px;
-  white-space: nowrap;
-  cursor: pointer; }
+  white-space: nowrap; }
   .key.active {
     background-color: yellow; }
 
