@@ -34,6 +34,12 @@ a {
 $dark: #000000;
 $yellow: yellow;
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .keys {
   display: flex;
   width: 100%;
@@ -69,4 +75,20 @@ $yellow: yellow;
 .col {
   display: flex;
   flex-direction: column;
+}
+
+.databox {
+  > * {
+    margin-top: 20px;
+    word-break: break-word;
+  }
+
+  .count {
+    text-align: center;
+  }
+}
+
+.logbox {
+  margin: 20px 0 20px 20px;
+  min-width: 342px;
 }

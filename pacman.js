@@ -506,6 +506,11 @@ Pacman.User = function (game, map) {
     logDirection(dir);
   }
 
+  /**
+   * The function takes in a direction, pushes it into an array, and then removes any duplicate values
+   * from the array
+   * @param dir - The direction that the user is moving in.
+   */
   const dirArr = [];
   function logDirection(dir) {
     dirArr.push(dir);
@@ -517,15 +522,34 @@ Pacman.User = function (game, map) {
       }
     }
 
-    console.log(dirArr);
+    logBox(dirArr);
   }
 
-  function storeDirection(obj) {
-    // let objects = obj;
-    // localStorage.setItem("Directions", JSON.stringify(objects));
-    // let retrievedObject = localStorage.getItem("objects");
-    // console.log("retrievedObject: ", JSON.parse(retrievedObject));
+  /**
+   * It takes an array of directions, counts the number of each direction, and then displays the
+   * directions and the counts in the HTML
+   * @param dirArr - an array of directions
+   */
+  function logBox(dirArr) {
+    const count = {};
+    const directionbox = document.getElementsByClassName("direction")[0];
+    const countingbox = document.getElementsByClassName("count")[0];
+
+    dirArr.forEach((element) => {
+      count[element] = (count[element] || 0) + 1;
+    });
+
+    directionbox.innerHTML = dirArr;
+    countingbox.innerHTML = JSON.stringify(count);
   }
+
+  /* TO DO */
+  // function storeDirection(obj) {
+  //   let objects = obj;
+  //   localStorage.setItem("Directions", JSON.stringify(objects));
+  //   let retrievedObject = localStorage.getItem("objects");
+  //   console.log("retrievedObject: ", JSON.parse(retrievedObject));
+  // }
 
   function drawDead(ctx, amount) {
     var size = map.blockSize,
