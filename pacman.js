@@ -504,10 +504,10 @@ Pacman.User = function (game, map) {
     const keys = document.getElementsByClassName("key");
 
     for (const key of keys) {
+      key.classList.remove("active");
+
       if (key.classList.contains(dir)) {
         key.classList.add("active");
-      } else {
-        key.classList.remove("active");
       }
     }
   }
