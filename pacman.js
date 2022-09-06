@@ -480,19 +480,36 @@ Pacman.User = function (game, map) {
    */
   function calcAngle(dir, pos) {
     if (dir == RIGHT && pos.x % 10 < 5) {
-      console.log("RIGHT");
+      logDirection("right");
       return { start: 0.25, end: 1.75, direction: false };
     } else if (dir === DOWN && pos.y % 10 < 5) {
-      console.log("DOWN");
+      logDirection("down");
       return { start: 0.75, end: 2.25, direction: false };
     } else if (dir === UP && pos.y % 10 < 5) {
-      console.log("UP");
+      logDirection("up");
       return { start: 1.25, end: 1.75, direction: true };
     } else if (dir === LEFT && pos.x % 10 < 5) {
-      console.log("LEFT");
+      logDirection("left");
       return { start: 0.75, end: 1.25, direction: true };
     }
     return { start: 0, end: 2, direction: false };
+  }
+
+  /**
+   * It takes a direction as an argument, finds all the keys on the page, and adds the active class to
+   * the one that matches the direction
+   * @param dir - The direction of the key that was pressed.
+   */
+  function logDirection(dir) {
+    const keys = document.getElementsByClassName("key");
+
+    for (const key of keys) {
+      if (key.classList.contains(dir)) {
+        key.classList.add("active");
+      } else {
+        key.classList.remove("active");
+      }
+    }
   }
 
   function drawDead(ctx, amount) {
