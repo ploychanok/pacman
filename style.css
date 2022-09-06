@@ -36,7 +36,8 @@ a {
 .keys {
   display: flex;
   width: 100%;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 .key {
   border: 2px solid #000000;
@@ -45,7 +46,7 @@ a {
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  padding: 4px 30px;
+  padding: 12px 30px;
   margin: 3px;
   white-space: nowrap;
   text-align: center; }

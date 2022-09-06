@@ -44,6 +44,7 @@ $yellow: yellow;
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 
 .key {
@@ -53,7 +54,7 @@ $yellow: yellow;
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  padding: 4px 30px;
+  padding: 12px 30px;
   margin: 3px;
   white-space: nowrap;
   text-align: center;
