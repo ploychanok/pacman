@@ -1,0 +1,53 @@
+.keys {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.key {
+  border: rem(2) solid $dark;
+  box-shadow: rem(2) rem(2) $dark;
+  font-size: rem(13);
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  padding: rem(12) rem(30);
+  margin: rem(3);
+  white-space: nowrap;
+  text-align: center;
+
+  &.active {
+    background-color: $yellow;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-transform: uppercase;
+    font-family: BDCartoonShoutRegular;
+  }
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.databox {
+  > * {
+    margin-top: rem(20);
+    word-break: break-word;
+  }
+
+  .count {
+    text-align: center;
+  }
+}
+
+.logbox {
+  margin: rem(20) 0 rem(20) rem(20);
+  min-width: rem(342);
+}

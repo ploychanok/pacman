@@ -1,95 +1,77 @@
 /** Original CSS **/
+/** DO NOT CHANGE OR MODIFY **/
 @font-face {
   font-family: "BDCartoonShoutRegular";
   src: url("BD_Cartoon_Shout-webfont.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 #pacman {
   height: 450px;
   width: 342px;
-  margin: 20px auto;
-}
+  margin: 20px auto; }
+
 #shim {
   font-family: BDCartoonShoutRegular;
   position: absolute;
-  visibility: hidden;
-}
+  visibility: hidden; }
+
 h1 {
   font-family: BDCartoonShoutRegular;
-  text-align: center;
-}
+  text-align: center; }
+
 body {
   width: 342px;
   margin: 0px auto;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
+
 a {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 /** End Original CSS **/
-
-/** Custom Style Starts From Here **/
-$dark: #000000;
-$yellow: yellow;
-
 .container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-}
+  align-items: flex-start; }
 
 .keys {
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .key {
-  border: 2px solid $dark;
-  box-shadow: 2px 2px $dark;
-  font-size: 0.85rem;
+  border: 0.125rem solid #000000;
+  box-shadow: 0.125rem 0.125rem #000000;
+  font-size: 0.8125rem;
   display: inline-block;
   font-weight: 600;
   letter-spacing: 0.05rem;
-  padding: 12px 30px;
-  margin: 3px;
+  padding: 0.75rem 1.875rem;
+  margin: 0.1875rem;
   white-space: nowrap;
-  text-align: center;
-
-  &.active {
-    background-color: $yellow;
-  }
-
-  span {
+  text-align: center; }
+  .key.active {
+    background-color: yellow; }
+  .key span {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     text-transform: uppercase;
-    font-family: BDCartoonShoutRegular;
-  }
-}
+    font-family: BDCartoonShoutRegular; }
 
 .col {
   display: flex;
-  flex-direction: column;
-}
+  flex-direction: column; }
 
-.databox {
-  > * {
-    margin-top: 20px;
-    word-break: break-word;
-  }
-
-  .count {
-    text-align: center;
-  }
-}
+.databox > * {
+  margin-top: 1.25rem;
+  word-break: break-word; }
+.databox .count {
+  text-align: center; }
 
 .logbox {
-  margin: 20px 0 20px 20px;
-  min-width: 342px;
-}
+  margin: 1.25rem 0 1.25rem 1.25rem;
+  min-width: 21.375rem; }
+
+/*# sourceMappingURL=style.css.map */
