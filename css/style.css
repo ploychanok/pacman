@@ -81,7 +81,7 @@ body {
 
 .logbox {
   margin: 1.25rem 0 1.25rem 1.25rem;
-  min-width: 21.375rem; }
+  width: 21.375rem; }
 
 .logo {
   width: 100%;
