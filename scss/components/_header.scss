@@ -1,0 +1,7 @@
+.logo {
+    @include background;
+    background-image: url(../asset/pacman-logo.webp);
+    background-position: center;
+    height: rem(81);
+    margin-top: 10%;
+}

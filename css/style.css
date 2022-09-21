@@ -32,10 +32,89 @@ html {
   background-color: #000000;
   color: #ffffff; }
 
+body {
+  width: auto; }
+
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; }
+  border: 0.28125rem solid #1919A6;
+  position: relative; }
+  .container .innerline {
+    border: 0.4375rem solid #2121DE;
+    margin: 0.625rem; }
+
+.top-left {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-image: url(../asset/Monster_Pink.png);
+  height: 4.375rem;
+  background-position: top left;
+  left: 3.125rem;
+  top: 3.125rem; }
+  .top-left-corner {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url(../asset/Cherry.png);
+    height: 13.75rem;
+    background-position: top left;
+    top: 7.8125rem;
+    left: 3rem; }
+
+.top-right {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-image: url(../asset/Monster_Blue.png);
+  height: 4.375rem;
+  background-position: top right;
+  right: 4.1875rem;
+  top: 3.125rem; }
+  .top-right-corner {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url(../asset/Monster_Orange.png);
+    height: 9.375rem;
+    background-position: top right;
+    top: 6.5625rem;
+    right: 2.90625rem; }
+
+.bottom-left {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-image: url(../asset/PAC-MAN.png);
+  height: 12.5rem;
+  background-position: bottom left;
+  bottom: 3.125rem;
+  left: 3.125rem; }
+
+.bottom-right {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  background-image: url(../asset/PAC-MAN_Mini.png);
+  height: 4.375rem;
+  background-position: bottom right;
+  bottom: 3.125rem;
+  right: 3.40625rem; }
+  .bottom-right-corner {
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url(../asset/Monster_Red.png);
+    height: 4.375rem;
+    background-position: bottom right;
+    bottom: 3.09375rem;
+    right: 9.0625rem; }
 
 .keys {
   display: flex;
@@ -46,7 +125,7 @@ html {
 
 .key {
   border: 0.125rem solid #000000;
-  box-shadow: 0.125rem 0.125rem yellow;
+  box-shadow: 0.125rem 0.125rem #1919A6;
   font-size: 0.8125rem;
   display: inline-block;
   font-weight: 600;
@@ -77,7 +156,16 @@ html {
   text-align: center; }
 
 .logbox {
-  margin: 1.25rem 0 1.25rem 1.25rem;
+  margin-top: 3.125rem;
   min-width: 21.375rem; }
+
+.logo {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../asset/pacman-logo.webp);
+  background-position: center;
+  height: 5.0625rem;
+  margin-top: 10%; }
 
 /*# sourceMappingURL=style.css.map */

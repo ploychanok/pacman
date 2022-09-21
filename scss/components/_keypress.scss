@@ -8,7 +8,7 @@
 
 .key {
   border: rem(2) solid $dark;
-  box-shadow: rem(2) rem(2) $yellow;
+  box-shadow: rem(2) rem(2) $blue-dark;
   font-size: rem(13);
   display: inline-block;
   font-weight: 600;
@@ -50,6 +50,7 @@
 }
 
 .logbox {
-  margin: rem(20) 0 rem(20) rem(20);
+  // margin: rem(20) 0 rem(20) rem(20);
+  margin-top: rem(50);
   min-width: rem(342);
 }
