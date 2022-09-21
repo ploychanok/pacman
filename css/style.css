@@ -35,6 +35,63 @@ html {
 body {
   width: auto; }
 
+.main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6.875rem; }
+
+.keys {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #000000; }
+
+.key {
+  border: 0.125rem solid #000000;
+  box-shadow: 0.125rem 0.125rem #1919A6;
+  font-size: 0.8125rem;
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1.875rem;
+  margin: 0.1875rem;
+  white-space: nowrap;
+  text-align: center;
+  background-color: #ffffff; }
+  .key.active {
+    background-color: yellow; }
+  .key span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-transform: uppercase;
+    font-family: BDCartoonShoutRegular; }
+
+.col {
+  display: flex;
+  flex-direction: column; }
+
+.databox > * {
+  margin-top: 1.25rem;
+  word-break: break-word; }
+.databox .count {
+  text-align: center; }
+
+.logbox {
+  margin: 1.25rem 0 1.25rem 1.25rem;
+  min-width: 21.375rem; }
+
+.logo {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../asset/pacman-logo.webp);
+  background-position: center;
+  height: 5.0625rem;
+  margin-top: 1.875rem; }
+
 .container {
   border: 0.28125rem solid #1919A6;
   position: relative; }
@@ -115,57 +172,5 @@ body {
     background-position: bottom right;
     bottom: 3.09375rem;
     right: 9.0625rem; }
-
-.keys {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  color: #000000; }
-
-.key {
-  border: 0.125rem solid #000000;
-  box-shadow: 0.125rem 0.125rem #1919A6;
-  font-size: 0.8125rem;
-  display: inline-block;
-  font-weight: 600;
-  letter-spacing: 0.05rem;
-  padding: 0.75rem 1.875rem;
-  margin: 0.1875rem;
-  white-space: nowrap;
-  text-align: center;
-  background-color: #ffffff; }
-  .key.active {
-    background-color: yellow; }
-  .key span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-transform: uppercase;
-    font-family: BDCartoonShoutRegular; }
-
-.col {
-  display: flex;
-  flex-direction: column; }
-
-.databox > * {
-  margin-top: 1.25rem;
-  word-break: break-word; }
-.databox .count {
-  text-align: center; }
-
-.logbox {
-  margin-top: 3.125rem;
-  min-width: 21.375rem; }
-
-.logo {
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url(../asset/pacman-logo.webp);
-  background-position: center;
-  height: 5.0625rem;
-  margin-top: 1.875rem; }
 
 /*# sourceMappingURL=style.css.map */

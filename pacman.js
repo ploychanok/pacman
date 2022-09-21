@@ -544,14 +544,6 @@ Pacman.User = function (game, map) {
 
   }
 
-  /* TO DO */
-  // function storeDirection(obj) {
-  //   let objects = obj;
-  //   localStorage.setItem("Directions", JSON.stringify(objects));
-  //   let retrievedObject = localStorage.getItem("objects");
-  //   console.log("retrievedObject: ", JSON.parse(retrievedObject));
-  // }
-
   function drawDead(ctx, amount) {
     var size = map.blockSize,
       half = size / 2;
