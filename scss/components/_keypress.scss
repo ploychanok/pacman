@@ -57,13 +57,13 @@
   $indent: rem(60);
 
   .lable {
-    width: calc(#{$indent} * 2);
+    width: calc(#{$indent} * 2.2);
     height: $indent;
     display: inline-block;
     position: relative;
     vertical-align: middle;
     line-height: $indent;
-    text-indent: $indent;
+    text-indent: calc(#{$indent} * 1.2);;
 
     &::before {
       content: '';

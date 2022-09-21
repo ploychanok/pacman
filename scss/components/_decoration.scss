@@ -1,77 +1,81 @@
 .container {
-    border: rem(4.5) solid $blue-dark;
-    position: relative;
-  
-    .innerline {
-      border: rem(7) solid $blue-light;
-      margin: rem(10);
-    }
+  border: rem(4.5) solid $blue-dark;
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - (4.5px + 7px));
+
+  .innerline {
+    border: rem(7) solid $blue-light;
+    margin: rem(10);
+    height: calc(100vh - (4.5px + 7px + 10px)*2);
   }
-  
-  @mixin corner-decoration {
-    @include background;
-    position: absolute;
-  }
-  
-  .top-left {
+}
+
+@mixin corner-decoration {
+  @include background;
+  position: absolute;
+  z-index: -1;
+}
+
+.top-left {
+  @include corner-decoration;
+  background-image: url(../asset/Monster_Pink.png);
+  height: rem(70);
+  background-position: top left;
+  left: rem(50);
+  top: rem(50);
+
+  &-corner {
     @include corner-decoration;
-    background-image: url(../asset/Monster_Pink.png);
-    height: rem(70);
+    background-image: url(../asset/Cherry.png);
+    height: rem(220);
     background-position: top left;
-    left: rem(50);
-    top: rem(50);
-  
-    &-corner {
-      @include corner-decoration;
-      background-image: url(../asset/Cherry.png);
-      height: rem(220);
-      background-position: top left;
-      top: rem(125);
-      left: rem(48);
-    }
+    top: rem(125);
+    left: rem(48);
   }
-  
-  .top-right {
+}
+
+.top-right {
+  @include corner-decoration;
+  background-image: url(../asset/Monster_Blue.png);
+  height: rem(70);
+  background-position: top right;
+  right: rem(67);
+  top: rem(50);
+
+  &-corner {
     @include corner-decoration;
-    background-image: url(../asset/Monster_Blue.png);
-    height: rem(70);
+    background-image: url(../asset/Monster_Orange.png);
+    height: rem(150);
     background-position: top right;
-    right: rem(67);
-    top: rem(50);
-  
-    &-corner {
-      @include corner-decoration;
-      background-image: url(../asset/Monster_Orange.png);
-      height: rem(150);
-      background-position: top right;
-      top: rem(105);
-      right: rem(46.5);
-    }
+    top: rem(105);
+    right: rem(46.5);
   }
-  
-  .bottom-left {
+}
+
+.bottom-left {
+  @include corner-decoration;
+  background-image: url(../asset/PAC-MAN.png);
+  height: rem(200);
+  background-position: bottom left;
+  bottom: rem(50);
+  left: rem(50);
+}
+
+.bottom-right {
+  @include corner-decoration;
+  background-image: url(../asset/PAC-MAN_Mini.png);
+  height: rem(70);
+  background-position: bottom right;
+  bottom: rem(50);
+  right: rem(54.5);
+
+  &-corner {
     @include corner-decoration;
-    background-image: url(../asset/PAC-MAN.png);
-    height: rem(200);
-    background-position: bottom left;
-    bottom: rem(50);
-    left: rem(50);
-  }
-  
-  .bottom-right {
-    @include corner-decoration;
-    background-image: url(../asset/PAC-MAN_Mini.png);
+    background-image: url(../asset/Monster_Red.png);
     height: rem(70);
     background-position: bottom right;
-    bottom: rem(50);
-    right: rem(54.5);
-  
-    &-corner {
-      @include corner-decoration;
-      background-image: url(../asset/Monster_Red.png);
-      height: rem(70);
-      background-position: bottom right;
-      bottom: rem(49.5);
-      right: rem(145);
-    }
+    bottom: rem(49.5);
+    right: rem(145);
   }
+}
