@@ -540,12 +540,21 @@ Pacman.User = function (game, map) {
     const upbox = document.getElementsByClassName('upbox')[0];
     const downbox = document.getElementsByClassName('downbox')[0];
 
+    if(count.left || count.right || count.up || count.down === void undefined) {
+      count.left = 0;
+      count.right = 0;
+      count.up = 0;
+      count.down = 0;
+    }
+
     dirArr.forEach((element) => {
       count[element] = (count[element] || 0) + 1;
     });
 
     // directionbox.innerHTML = dirArr;
     // countingbox.innerHTML = JSON.stringify(count);
+
+    
 
     leftbox.innerHTML = JSON.stringify(count.left);
     rightbox.innerHTML = JSON.stringify(count.right);
