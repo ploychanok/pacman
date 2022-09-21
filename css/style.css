@@ -38,7 +38,7 @@ body {
 .main {
   display: flex;
   justify-content: center;
-  margin-bottom: 6.875rem; }
+  margin-bottom: 1.875rem; }
 
 .keys {
   display: flex;
@@ -125,7 +125,8 @@ body {
   .container .innerline {
     border: 0.4375rem solid #2121DE;
     margin: 0.625rem;
-    height: calc(100vh - (4.5px + 7px + 10px)*2); }
+    height: calc(100vh - (4.5px + 7px + 10px)*2);
+    overflow: scroll; }
 
 .top-left {
   width: 100%;

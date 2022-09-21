@@ -8,6 +8,7 @@
     border: rem(7) solid $blue-light;
     margin: rem(10);
     height: calc(100vh - (4.5px + 7px + 10px)*2);
+    overflow: scroll;
   }
 }
 
