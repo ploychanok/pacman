@@ -3,11 +3,12 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  color: $dark;
 }
 
 .key {
   border: rem(2) solid $dark;
-  box-shadow: rem(2) rem(2) $dark;
+  box-shadow: rem(2) rem(2) $yellow;
   font-size: rem(13);
   display: inline-block;
   font-weight: 600;
@@ -16,6 +17,7 @@
   margin: rem(3);
   white-space: nowrap;
   text-align: center;
+  background-color: $white;
 
   &.active {
     background-color: $yellow;

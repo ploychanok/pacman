@@ -2,7 +2,7 @@
 /** DO NOT CHANGE OR MODIFY **/
 @font-face {
   font-family: "BDCartoonShoutRegular";
-  src: url("BD_Cartoon_Shout-webfont.ttf") format("truetype");
+  src: url("../BD_Cartoon_Shout-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 #pacman {
@@ -28,6 +28,10 @@ a {
   text-decoration: none; }
 
 /** End Original CSS **/
+html {
+  background-color: #000000;
+  color: #ffffff; }
+
 .container {
   display: flex;
   justify-content: center;
@@ -37,11 +41,12 @@ a {
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  color: #000000; }
 
 .key {
   border: 0.125rem solid #000000;
-  box-shadow: 0.125rem 0.125rem #000000;
+  box-shadow: 0.125rem 0.125rem yellow;
   font-size: 0.8125rem;
   display: inline-block;
   font-weight: 600;
@@ -49,7 +54,8 @@ a {
   padding: 0.75rem 1.875rem;
   margin: 0.1875rem;
   white-space: nowrap;
-  text-align: center; }
+  text-align: center;
+  background-color: #ffffff; }
   .key.active {
     background-color: yellow; }
   .key span {

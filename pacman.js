@@ -541,6 +541,7 @@ Pacman.User = function (game, map) {
 
     directionbox.innerHTML = dirArr;
     countingbox.innerHTML = JSON.stringify(count);
+
   }
 
   /* TO DO */
