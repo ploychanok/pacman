@@ -73,14 +73,39 @@ body {
   display: flex;
   flex-direction: column; }
 
-.databox > * {
-  margin-top: 1.25rem;
-  word-break: break-word; }
-.databox .count {
-  text-align: center; }
+.databox {
+  font-family: BDCartoonShoutRegular; }
+  .databox > * {
+    margin-top: 1.25rem;
+    word-break: break-word; }
+    .databox > *:first-child {
+      margin-top: 0.3125rem; }
+  .databox .count {
+    text-align: center; }
+  .databox .lable {
+    width: calc(3.75rem * 2);
+    height: 3.75rem;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    line-height: 3.75rem;
+    text-indent: 3.75rem; }
+    .databox .lable::before {
+      content: '';
+      position: absolute;
+      background-image: url(../asset/Monster_Ijike.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      left: 0;
+      width: 3.75rem;
+      height: 3.75rem; }
+  .databox .space {
+    width: 2.5rem;
+    display: inline-block;
+    font-family: BDCartoonShoutRegular; }
 
 .logbox {
-  margin: 1.25rem 0 1.25rem 1.25rem;
+  margin: 4.375rem 0 1.25rem 1.25rem;
   width: 21.375rem; }
 
 .logo {
