@@ -4,48 +4,59 @@
   font-family: "BDCartoonShoutRegular";
   src: url("../BD_Cartoon_Shout-webfont.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
+
 #pacman {
   height: 450px;
   width: 342px;
-  margin: 20px auto; }
+  margin: 20px auto;
+}
 
 #shim {
   font-family: BDCartoonShoutRegular;
   position: absolute;
-  visibility: hidden; }
+  visibility: hidden;
+}
 
 h1 {
   font-family: BDCartoonShoutRegular;
-  text-align: center; }
+  text-align: center;
+}
 
 body {
   width: 342px;
   margin: 0px auto;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /** End Original CSS **/
 html {
   background-color: #000000;
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 body {
-  width: auto; }
+  width: auto;
+}
 
 .main {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.875rem; }
+  margin-bottom: 1.875rem;
+}
 
 .keys {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  color: #000000; }
+  color: #000000;
+}
 
 .key {
   border: 0.125rem solid #000000;
@@ -58,55 +69,75 @@ body {
   margin: 0.1875rem;
   white-space: nowrap;
   text-align: center;
-  background-color: #ffffff; }
-  .key.active {
-    background-color: yellow; }
-  .key span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    text-transform: uppercase;
-    font-family: BDCartoonShoutRegular; }
+  background-color: #ffffff;
+}
+
+.key.active {
+  background-color: yellow;
+}
+
+.key span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-transform: uppercase;
+  font-family: BDCartoonShoutRegular;
+}
 
 .col {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .databox {
-  font-family: BDCartoonShoutRegular; }
-  .databox > * {
-    margin-top: 1.25rem;
-    word-break: break-word; }
-    .databox > *:first-child {
-      margin-top: 0.3125rem; }
-  .databox .count {
-    text-align: center; }
-  .databox .lable {
-    width: calc(3.75rem * 2.2);
-    height: 3.75rem;
-    display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    line-height: 3.75rem;
-    text-indent: calc(3.75rem * 1.2); }
-    .databox .lable::before {
-      content: '';
-      position: absolute;
-      background-image: url(../asset/Monster_Ijike.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      left: 0;
-      width: 3.75rem;
-      height: 3.75rem; }
-  .databox .space {
-    width: 2.5rem;
-    display: inline-block;
-    font-family: BDCartoonShoutRegular; }
+  font-family: BDCartoonShoutRegular;
+}
+
+.databox>* {
+  margin-top: 1.25rem;
+  word-break: break-word;
+}
+
+.databox>*:first-child {
+  margin-top: 0.3125rem;
+}
+
+.databox .count {
+  text-align: center;
+}
+
+.databox .lable {
+  width: calc(3.75rem * 2.2);
+  height: 3.75rem;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  line-height: 3.75rem;
+  text-indent: calc(3.75rem * 1.2);
+}
+
+.databox .lable::before {
+  content: '';
+  position: absolute;
+  background-image: url(../asset/Monster_Ijike.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.databox .space {
+  width: 2.5rem;
+  display: inline-block;
+  font-family: BDCartoonShoutRegular;
+}
 
 .logbox {
   margin: 4.375rem 0 1.25rem 1.25rem;
-  width: 21.375rem; }
+  width: 21.375rem;
+}
 
 .logo {
   width: 100%;
@@ -115,18 +146,22 @@ body {
   background-image: url(../asset/pacman-logo.webp);
   background-position: center;
   height: 5.0625rem;
-  margin-top: 1.875rem; }
+  margin-top: 1.875rem;
+}
 
 .container {
   border: 0.28125rem solid #1919A6;
   position: relative;
   overflow: hidden;
-  height: calc(100vh - (4.5px + 7px)); }
-  .container .innerline {
-    border: 0.4375rem solid #2121DE;
-    margin: 0.625rem;
-    height: calc(100vh - (4.5px + 7px + 10px)*2);
-    overflow: scroll; }
+  height: calc(100vh - (4.5px + 7px));
+}
+
+.container .innerline {
+  border: 0.4375rem solid #2121DE;
+  margin: 0.625rem;
+  height: calc(100vh - (4.5px + 7px + 10px)*2);
+  overflow: scroll;
+}
 
 .top-left {
   width: 100%;
@@ -138,18 +173,21 @@ body {
   height: 4.375rem;
   background-position: top left;
   left: 3.125rem;
-  top: 3.125rem; }
-  .top-left-corner {
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: -1;
-    background-image: url(../asset/Cherry.png);
-    height: 13.75rem;
-    background-position: top left;
-    top: 7.8125rem;
-    left: 3rem; }
+  top: 3.125rem;
+}
+
+.top-left-corner {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../asset/Cherry.png);
+  height: 13.75rem;
+  background-position: top left;
+  top: 7.8125rem;
+  left: 3rem;
+}
 
 .top-right {
   width: 100%;
@@ -161,18 +199,21 @@ body {
   height: 4.375rem;
   background-position: top right;
   right: 4.1875rem;
-  top: 3.125rem; }
-  .top-right-corner {
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: -1;
-    background-image: url(../asset/Monster_Orange.png);
-    height: 9.375rem;
-    background-position: top right;
-    top: 6.5625rem;
-    right: 2.90625rem; }
+  top: 3.125rem;
+}
+
+.top-right-corner {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../asset/Monster_Orange.png);
+  height: 9.375rem;
+  background-position: top right;
+  top: 6.5625rem;
+  right: 2.90625rem;
+}
 
 .bottom-left {
   width: 100%;
@@ -184,7 +225,8 @@ body {
   height: 12.5rem;
   background-position: bottom left;
   bottom: 3.125rem;
-  left: 3.125rem; }
+  left: 3.125rem;
+}
 
 .bottom-right {
   width: 100%;
@@ -196,17 +238,24 @@ body {
   height: 4.375rem;
   background-position: bottom right;
   bottom: 3.125rem;
-  right: 3.40625rem; }
-  .bottom-right-corner {
-    width: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    z-index: -1;
-    background-image: url(../asset/Monster_Red.png);
-    height: 4.375rem;
-    background-position: bottom right;
-    bottom: 3.09375rem;
-    right: 9.0625rem; }
+  right: 3.40625rem;
+}
+
+.bottom-right-corner {
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  background-image: url(../asset/Monster_Red.png);
+  height: 4.375rem;
+  background-position: bottom right;
+  bottom: 3.09375rem;
+  right: 9.0625rem;
+}
+
+.chart-button{
+  margin-left: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */

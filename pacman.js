@@ -540,7 +540,7 @@ Pacman.User = function (game, map) {
     const upbox = document.getElementsByClassName('upbox')[0];
     const downbox = document.getElementsByClassName('downbox')[0];
 
-    if(count.left || count.right || count.up || count.down === void undefined) {
+    if (count.left || count.right || count.up || count.down === void undefined) {
       count.left = 0;
       count.right = 0;
       count.up = 0;
@@ -554,12 +554,15 @@ Pacman.User = function (game, map) {
     // directionbox.innerHTML = dirArr;
     // countingbox.innerHTML = JSON.stringify(count);
 
-    
-
     leftbox.innerHTML = JSON.stringify(count.left);
     rightbox.innerHTML = JSON.stringify(count.right);
     upbox.innerHTML = JSON.stringify(count.up);
     downbox.innerHTML = JSON.stringify(count.down);
+
+    localStorage.setItem('left', count.left);
+    localStorage.setItem('right', count.right);
+    localStorage.setItem('up', count.up);
+    localStorage.setItem('down', count.down);
   }
 
   function drawDead(ctx, amount) {

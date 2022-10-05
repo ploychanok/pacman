@@ -58,52 +58,63 @@
               <span class="space">&nbsp;&#10005;&nbsp;</span>
               <span class="leftbox"></span>
             </div>
-            
+
             <div>
               <span class="lable">RIGHT</span>
               <span class="space">&nbsp;&#10005;&nbsp;</span>
               <span class="rightbox"></span>
             </div>
-            
+
             <div>
               <span class="lable">UP</span>
               <span class="space">&nbsp;&#10005;&nbsp;</span>
               <span class="upbox"></span>
             </div>
-            
+
             <div>
               <span class="lable">DOWN</span>
               <span class="space">&nbsp;&#10005;&nbsp;</span>
               <span class="downbox"></span>
             </div>
 
+            <div class="chart-button">
+              <button class="key" onclick="openChart()">Show logs</button>
             </div>
+
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <script src="pacman.js"></script>
-    <script src="modernizr-1.5.min.js"></script>
+  <script src="pacman.js"></script>
+  <script src="modernizr-1.5.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
 
-    <script>
-      var el = document.getElementById("pacman");
 
-      if (
-        Modernizr.canvas &&
-        Modernizr.localstorage &&
-        Modernizr.audio &&
-        (Modernizr.audio.ogg || Modernizr.audio.mp3)
-      ) {
-        window.setTimeout(function () {
-          PACMAN.init(el, "./");
-        }, 0);
-      } else {
-        el.innerHTML =
-          "Sorry, needs a decent browser<br /><small>" +
-          "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
-      }
-    </script>
+  <script>
+    var el = document.getElementById("pacman");
+
+
+    function openChart() {
+      window.open("visualization.html", "", "width=700,height=700");
+    }
+
+    if (
+      Modernizr.canvas &&
+      Modernizr.localstorage &&
+      Modernizr.audio &&
+      (Modernizr.audio.ogg || Modernizr.audio.mp3)
+    ) {
+      window.setTimeout(function () {
+        PACMAN.init(el, "./");
+      }, 0);
+    } else {
+      el.innerHTML =
+        "Sorry, needs a decent browser<br /><small>" +
+        "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+    }
+  </script>
 </body>
 
 </html>
