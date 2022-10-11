@@ -8,19 +8,19 @@ const downbox = parseInt(localStorage.getItem('down'))
 // the idea is to scale the visualization one round at a time, describing in the svg only the top ten scorers
 const data = [
     {
-        name: 'Press Left',
+        name: 'asset\\arrow-left.png',
         points: [leftbox],
     },
     {
-        name: 'Press Right',
+        name: 'asset\\arrow-right.png',
         points: [rightbox],
     },
     {
-        name: 'asset\\arrow.png',
+        name: 'asset\\arrow-up.png',
         points: [upbox],
     },
     {
-        name: 'Press Down',
+        name: 'asset\\arrow-down.png',
         points: [downbox],
     },
 ];
@@ -198,8 +198,10 @@ function updateChampionship(round = 1) {
         .attr('width', ({ points }) => xScale(points));
 
     enterGroup
-        .append('text').text(({ points }) => points)
+        .append('text')
+        .text(({ points }) => points)
         .attr('class', 'point')
+        .attr("x", function(points) { return x(points) + x.rangeBand()/2; })
 
     // for the existing elements update the translation of the group
     update
