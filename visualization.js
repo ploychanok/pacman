@@ -3,11 +3,6 @@ const rightbox = parseInt(localStorage.getItem('right'))
 const upbox = parseInt(localStorage.getItem('up'))
 const downbox = parseInt(localStorage.getItem('down'))
 
-console.log(leftbox)
-console.log(rightbox)
-console.log(upbox)
-console.log(downbox)
-
 
 // data describing the points awarded at each round to f1 drivers in the 2007 championship (in alphabetical order)
 // the idea is to scale the visualization one round at a time, describing in the svg only the top ten scorers
@@ -99,11 +94,11 @@ const yAxis = d3
 // show only the last name
 // .tickFormat(d => d.split(' ')[1]);
 
-group
-    .append('g')
-    .attr('class', 'axis x-axis')
-    .attr('transform', `translate(0 ${height})`)
-// .call(xAxis);
+// group
+//     .append('g')
+//     .attr('class', 'axis x-axis')
+//     .attr('transform', `translate(0 ${height})`)
+// // .call(xAxis);
 
 group
     .append('g')
@@ -175,7 +170,6 @@ function updateChampionship(round = 1) {
         .attr('class', 'racer')
         // translate the group vertically according to the racer's name
         .attr('transform', ({ name }) => `translate(0 ${yScale(name)})`);
-
     // in the newly created group add a rectangle
     // set the shape's width according to the racer's points
     enterGroup
@@ -189,6 +183,10 @@ function updateChampionship(round = 1) {
         .ease(d3.easeLinear)
         .duration(duration)
         .attr('width', ({ points }) => xScale(points));
+
+    enterGroup
+    .append('text').text(({ points }) => points)
+    .attr('class', 'point')
 
     // for the existing elements update the translation of the group
     update

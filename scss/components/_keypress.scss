@@ -63,14 +63,14 @@
     position: relative;
     vertical-align: middle;
     line-height: $indent;
-    text-indent: calc(#{$indent} * 1.2);;
+    text-indent: calc(#{$indent} * 1.2);
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       background-image: url(../asset/Monster_Ijike.png);
       background-size: contain;
-      background-repeat: no-repeat; 
+      background-repeat: no-repeat;
       left: 0;
       width: $indent;
       height: $indent;
@@ -89,11 +89,15 @@
   width: rem(342);
 }
 
-
-// .viz {
-//   svg {
-//     text {
-     
-//     }
-//   }
-// }
+.svg {
+  g {
+    text {
+      &.point {
+        fill: $blue-dark;
+        font-family: BDCartoonShoutRegular;
+        font-size: rem(40);
+        transform: translate(75%, 10.5%)
+      }
+    }
+  }
+}
