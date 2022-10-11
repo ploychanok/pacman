@@ -120,7 +120,7 @@ function updateChampionship(round = 1) {
             // compute the total number of points up to the prescribed round
             points: points.slice(0, round).reduce((acc, curr) => acc + curr, 0),
         }))
-        .sort(({ points: pointsA }, { points: pointsB }) => d3.descending(pointsA, pointsB))
+        // .sort(({ points: pointsA }, { points: pointsB }) => d3.descending(pointsA, pointsB))
         // consider only the first ten racers (in the first round this includes two racers with 0 points, as points in 2007 were awarded to the first eight only)
         .slice(0, 10);
 
