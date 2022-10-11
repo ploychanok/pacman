@@ -91,13 +91,12 @@
 
 .svg {
   g {
-    text {
-      &.point {
-        fill: $blue-dark;
-        font-family: BDCartoonShoutRegular;
-        font-size: rem(40);
-        transform: translate(75%, 10.5%)
-      }
+    .point {
+      fill: $blue-dark;
+      font-family: BDCartoonShoutRegular;
+      font-size: rem(40);
+      transform: translate(-10%, 10.5%);
+      // transition: width 10s ease;
     }
   }
 
