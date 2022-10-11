@@ -201,7 +201,7 @@ function updateChampionship(round = 1) {
         .append('text')
         .text(({ points }) => points)
         .attr('class', 'point')
-        .attr("x", function(points) { return x(points) + x.rangeBand()/2; })
+        // .attr("x", function(points) { return x(points) + x.rangeBand()/2; });
 
     // for the existing elements update the translation of the group
     update
