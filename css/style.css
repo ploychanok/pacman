@@ -48,6 +48,15 @@ body {
 .viz {
   background-color: transparent; }
 
+#visualization-page {
+  height: 100%; }
+  #visualization-page body {
+    height: 100%; }
+    #visualization-page body .container {
+      height: 100%; }
+      #visualization-page body .container .innerline {
+        height: calc(100vh - (4.5px + 10px)*2); }
+
 .keys {
   display: flex;
   width: 100%;
@@ -135,8 +144,7 @@ body {
 .container {
   border: 0.28125rem solid #1919A6;
   position: relative;
-  overflow: hidden;
-  height: calc(100vh - (4.5px + 7px)); }
+  overflow: hidden; }
   .container .innerline {
     border: 0.4375rem solid #2121DE;
     margin: 0.625rem;

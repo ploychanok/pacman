@@ -2,7 +2,7 @@
   border: rem(4.5) solid $blue-dark;
   position: relative;
   overflow: hidden;
-  height: calc(100vh - (4.5px + 7px));
+  // height: calc(100vh - (4.5px + 7px));
 
   .innerline {
     border: rem(7) solid $blue-light;

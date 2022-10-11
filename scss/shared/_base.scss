@@ -23,3 +23,19 @@ body {
 .viz {
   background-color: transparent;
 }
+
+#visualization-page {
+  height: 100%;
+
+  body {
+    height: 100%;
+
+    .container {
+      height: 100%;
+
+      .innerline {
+        height: calc(100vh - (4.5px + 10px)*2);
+      }
+    }
+  }
+}
