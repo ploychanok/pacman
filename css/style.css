@@ -121,6 +121,8 @@ body {
   font-family: BDCartoonShoutRegular;
   font-size: 2.5rem;
   transform: translate(75%, 10.5%); }
+.svg image {
+  transform: scale(0.8); }
 
 .logo {
   width: 100%;
