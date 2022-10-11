@@ -92,11 +92,10 @@
 .svg {
   g {
     .point {
-      fill: $blue-dark;
+      // fill: $blue-dark;
       font-family: BDCartoonShoutRegular;
       font-size: rem(40);
       transform: translate(-10%, 10.5%);
-      // transition: width 10s ease;
     }
   }
 
