@@ -16,7 +16,7 @@ const data = [
         points: [rightbox],
     },
     {
-        name: 'Press Up',
+        name: 'asset\\arrow.png',
         points: [upbox],
     },
     {
@@ -68,6 +68,8 @@ const racers = group
 // describe a quantitative scale for the x axis, for the racers' points
 // ! include the domain when the data is bound, and the axis relates the maximum number of points which can be awarded (a multiple of maxPoints)
 const maxPoints = d3.max(data, ({ points }) => d3.max(points));
+
+
 const xScale = d3
     .scaleLinear()
     .range([0, width])
@@ -92,7 +94,7 @@ const xAxis = d3
 const yAxis = d3
     .axisLeft(yScale)
 // show only the last name
-// .tickFormat(d => d.split(' ')[1]);
+// .tickFormat(d => d.split(' ')[1])
 
 // group
 //     .append('g')
@@ -150,6 +152,17 @@ function updateChampionship(round = 1) {
         .duration(duration)
         .call(yAxis);
 
+
+    svg.select(".axis").selectAll("text").remove();
+
+    svg.select(".axis").selectAll(".tick")
+        .data(data)
+        .append("svg:image")
+        .attr("xlink:href", function (data) { return data.name; })
+        .attr("width", 100)
+        .attr("height", 100)
+        .attr("x", -120)
+        .attr("y", -50);
     // add one group element for each data point in the mapped/sorted/sliced array
     // update selection
     const update = racers
@@ -185,8 +198,8 @@ function updateChampionship(round = 1) {
         .attr('width', ({ points }) => xScale(points));
 
     enterGroup
-    .append('text').text(({ points }) => points)
-    .attr('class', 'point')
+        .append('text').text(({ points }) => points)
+        .attr('class', 'point')
 
     // for the existing elements update the translation of the group
     update
