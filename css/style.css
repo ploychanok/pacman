@@ -132,6 +132,10 @@ body {
 .svg image {
   transform: scale(0.8); }
 
+.chart-button button {
+  cursor: pointer;
+  font-family: BDCartoonShoutRegular; }
+
 .logo {
   width: 100%;
   background-size: contain;
