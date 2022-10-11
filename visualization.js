@@ -195,13 +195,13 @@ function updateChampionship(round = 1) {
         .transition()
         .ease(d3.easeLinear)
         .duration(duration)
-        .attr('width', ({ points }) => xScale(points))
+        .attr('width', ({ points }) => xScale(points));
 
     enterGroup
         .append('text')
         .text(({ points }) => points)
         .attr('class', 'point')
-        .attr('x', ({ points }) => xScale(points))
+        .attr('x', ({ points }) => xScale(points));
 
     // for the existing elements update the translation of the group
     update
