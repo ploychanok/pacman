@@ -532,9 +532,6 @@ Pacman.User = function (game, map) {
    */
   function logBox(dirArr) {
     const count = {};
-    // const directionbox = document.getElementsByClassName("direction")[0];
-    // const countingbox = document.getElementsByClassName("count")[0];
-
     const leftbox = document.getElementsByClassName('leftbox')[0];
     const rightbox = document.getElementsByClassName('rightbox')[0];
     const upbox = document.getElementsByClassName('upbox')[0];
@@ -550,9 +547,6 @@ Pacman.User = function (game, map) {
     dirArr.forEach((element) => {
       count[element] = (count[element] || 0) + 1;
     });
-
-    // directionbox.innerHTML = dirArr;
-    // countingbox.innerHTML = JSON.stringify(count);
 
     leftbox.innerHTML = JSON.stringify(count.left);
     rightbox.innerHTML = JSON.stringify(count.right);
@@ -854,6 +848,8 @@ Pacman.Audio = function (game) {
   }
 
   function play(name) {
+    console.log('pacman is', name);
+
     if (!game.soundDisabled()) {
       endEvents[name] = function () {
         ended(name);
