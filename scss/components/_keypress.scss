@@ -57,7 +57,7 @@
   $indent: rem(60);
 
   .lable {
-    width: calc(#{$indent} * 2.2);
+    width: calc(#{$indent} * 2.2 + #{rem(10)});
     height: $indent;
     display: inline-block;
     position: relative;

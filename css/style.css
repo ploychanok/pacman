@@ -100,7 +100,7 @@ body {
   .databox .count {
     text-align: center; }
   .databox .lable {
-    width: calc(3.75rem * 2.2);
+    width: calc(3.75rem * 2.2 + 0.625rem);
     height: 3.75rem;
     display: inline-block;
     position: relative;
