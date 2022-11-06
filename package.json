@@ -1,0 +1,31 @@
+{
+  "name": "pacman",
+  "version": "1.0.0",
+  "description": "pacman project for NAIST-pbl2022",
+  "main": "pacman.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:js": "webpack --config webpack.config.js",
+    "compile:style": "sass scss/index.scss css/style.css",
+    "watch": "npm run compile:style && npm run compile:js -wo",
+    "build": "npm run compile:style && npm run compile:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ploychanok/pacman.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ploychanok/pacman/issues"
+  },
+  "homepage": "https://github.com/ploychanok/pacman#readme",
+  "dependencies": {
+    "firebase": "^9.13.0",
+    "sass": "^1.56.0",
+    "webpack": "^5.74.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
+  }
+}
