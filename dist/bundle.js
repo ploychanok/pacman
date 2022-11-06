@@ -16,7 +16,7 @@
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Config\": () => (/* reexport safe */ _server_config__WEBPACK_IMPORTED_MODULE_0__.Config),\n/* harmony export */   \"Test\": () => (/* reexport safe */ _shared_test__WEBPACK_IMPORTED_MODULE_1__.Test)\n/* harmony export */ });\n/* harmony import */ var _server_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./server/config */ \"./js/server/config.js\");\n/* harmony import */ var _shared_test__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared/test */ \"./js/shared/test.js\");\n\n\n\n//# sourceURL=webpack://pacman/./js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Config\": () => (/* reexport safe */ _server_config__WEBPACK_IMPORTED_MODULE_0__.Config),\n/* harmony export */   \"Viewport\": () => (/* reexport safe */ _shared_viewport__WEBPACK_IMPORTED_MODULE_1__.Viewport)\n/* harmony export */ });\n/* harmony import */ var _server_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./server/config */ \"./js/server/config.js\");\n/* harmony import */ var _shared_viewport__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./shared/viewport */ \"./js/shared/viewport.js\");\n\n\n\n//# sourceURL=webpack://pacman/./js/index.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ \"./js/index.js\");\n// Add your scripts here\n\n\n/* This is a JavaScript event listener. It's a function that runs when the DOM is ready. */\ndocument.addEventListener('DOMContentLoaded', () => {\n    new _index__WEBPACK_IMPORTED_MODULE_0__.Config().init();\n    new _index__WEBPACK_IMPORTED_MODULE_0__.Test().init();\n});\n\n\n\n//# sourceURL=webpack://pacman/./js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ \"./js/index.js\");\n// Add your scripts here\n\n\n/* This is a JavaScript event listener. It's a function that runs when the DOM is ready. */\ndocument.addEventListener('DOMContentLoaded', () => {\n    new _index__WEBPACK_IMPORTED_MODULE_0__.Config().init();\n    // new Viewport().init();\n});\n\n\n\n//# sourceURL=webpack://pacman/./js/script.js?");
 
 /***/ }),
 
@@ -40,13 +40,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./js/shared/test.js":
-/*!***************************!*\
-  !*** ./js/shared/test.js ***!
-  \***************************/
+/***/ "./js/shared/viewport.js":
+/*!*******************************!*\
+  !*** ./js/shared/viewport.js ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Test\": () => (/* binding */ Test)\n/* harmony export */ });\nclass Test {\n  init() {\n    console.log('hello script')\n  }\n}\n\n\n//# sourceURL=webpack://pacman/./js/shared/test.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Viewport\": () => (/* binding */ Viewport)\n/* harmony export */ });\nclass Viewport {\n  init() {\n    setTimeout(() => {\n      this.screenHeight();\n    }, 500);\n  }\n\n  /**\n   * It sets the height of the app to the height of the window.\n   */\n  screenHeight() {\n    const appHeight = () => {\n      const doc = document.documentElement;\n      doc.style.setProperty('--app-height', `${window.innerHeight}px`);\n    };\n    window.addEventListener('resize', appHeight);\n    appHeight();\n  }\n}\n\n//# sourceURL=webpack://pacman/./js/shared/viewport.js?");
 
 /***/ }),
 
