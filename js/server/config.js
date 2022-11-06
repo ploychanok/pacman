@@ -5,6 +5,18 @@ import { initializeApp } from "firebase/app";
 
 export class Config {
   init() {
+    this.firebase();
+  }
+
+  // getData() {
+  //   console.log('hello get');
+  // }
+
+  // sendData() {
+  //   console.log('hello send');
+  // }
+
+  firebase() {
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyD_jtI27CZljNW-3_vVJcNMS5f7b3-5OHs",
