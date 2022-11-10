@@ -8,20 +8,12 @@ export class Config {
     this.firebase();
   }
 
-  // getData() {
-  //   console.log('hello get');
-  // }
-
-  // sendData() {
-  //   console.log('hello send');
-  // }
-
   firebase() {
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyD_jtI27CZljNW-3_vVJcNMS5f7b3-5OHs",
       authDomain: "pacman-naist.firebaseapp.com",
-      databaseURL: "https://pacman-naist-default-rtdb.asia-southeast1.firebasedatabase.app",
+      databaseURL: "https://pacman-naist-default-rtdb.asia-southeast1.firebasedatabase.app/",
       projectId: "pacman-naist",
       storageBucket: "pacman-naist.appspot.com",
       messagingSenderId: "636233029371",
@@ -30,6 +22,11 @@ export class Config {
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
+    this.getKey(app);
+  }
+
+  getKey(app){
+    //todo
   }
 }
 
