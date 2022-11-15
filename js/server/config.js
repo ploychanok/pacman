@@ -28,26 +28,49 @@ export class Config {
     const dbRef = ref(getDatabase());
     get(child(dbRef, `logs`)).then((snapshot) => {
       if (snapshot.exists()) {
-        console.log(snapshot.val());
+        // console.log(snapshot.val());
+        const data = snapshot.val();
+        this.getData(data);
       } else {
         console.log("No data available");
       }
-    }).catch((error) => {
-      console.error(error);
-    });
+    })
+      .catch((error) => {
+        console.error(error);
+      });
+
+
+  }
+
+  getData(data) {
+    let temp = {
+      left: 0,
+      right: 0,
+      up: 0,
+      down: 0
+    }
 
     const btn = document.getElementById("sendData");
+    if (btn === undefined || btn === null) {
+      return;
+    }
+
     btn.addEventListener('click', () => {
       //do sth;
-      data.left = data.left + parseInt(localStorage.getItem("left"));
-      data.right = data.right + parseInt(localStorage.getItem("right"));
-      data.up = data.up + parseInt(localStorage.getItem("up"));
-      data.down = data.down + parseInt(localStorage.getItem("down"));
-      console.log(data)
+      temp.left = data.left + parseInt(localStorage.getItem("left"));
+      temp.right = data.right + parseInt(localStorage.getItem("right"));
+      temp.up = data.up + parseInt(localStorage.getItem("up"));
+      temp.down = data.down + parseInt(localStorage.getItem("down"));
+      console.log(temp)
 
       // firebase.database().ref('logs').set({
       // });
     });
+
+
+
+
+    // console.log(data);
   }
 
 
