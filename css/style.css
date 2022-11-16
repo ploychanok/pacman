@@ -168,8 +168,8 @@ body {
 }
 
 .disable {
-  cursor: not-allowed;
-  background-color: gray;
+  cursor: not-allowed !important;
+  opacity: 0.3;
 }
 
 .logo {

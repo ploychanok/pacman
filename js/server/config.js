@@ -75,6 +75,11 @@ export class Config {
       updates['logs'] = temp;
       if (localStorage.length > 1) {
         update(dbRef, updates);
+        sessionStorage.setItem("left", temp.left)
+        sessionStorage.setItem("right", temp.right)
+        sessionStorage.setItem("up", temp.up)
+        sessionStorage.setItem("down", temp.down)
+        window.open("firebaseVisualization.html");
         localStorage.removeItem("left");
         localStorage.removeItem("right");
         localStorage.removeItem("up");
