@@ -79,7 +79,7 @@
 
             <div class="chart-button">
               <button class="key" onclick="openChart()" type="button">Show logs</button>
-              <button class="key" type="button" onclick="changeData(3)">Send Data</button>
+              <button class="key" id="sendData" type="button">Send Data</button>
             </div>
 
           </div>
@@ -94,9 +94,9 @@
   <script src="https://d3js.org/d3.v4.min.js"></script>
 
 
+
   <script>
     var el = document.getElementById("pacman");
-
 
     function openChart() {
       window.open("visualization.html", "");
@@ -116,6 +116,10 @@
         "Sorry, needs a decent browser<br /><small>" +
         "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
     }
+
+
+
+
   </script>
 </body>
 

@@ -1,5 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getDatabase, child, get, update, ref } from "firebase/database";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -22,11 +24,55 @@ export class Config {
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
-    this.getKey(app);
+
+
+    const dbRef = ref(getDatabase());
+    get(child(dbRef, `logs`)).then((snapshot) => {
+      if (snapshot.exists()) {
+        // console.log(snapshot.val());
+        const data = snapshot.val();
+        console.log(data)
+        this.getData(data);
+      } else {
+        console.log("No data available");
+      }
+    })
+      .catch((error) => {
+        console.error(error);
+      });
+
+
   }
 
-  getKey(app){
-    //todo
+  getData(data) {
+    let temp = {
+      left: 0,
+      right: 0,
+      up: 0,
+      down: 0
+    }
+
+    const btn = document.getElementById("sendData");
+    if (btn === undefined || btn === null) {
+      return;
+    }
+
+    btn.addEventListener('click', () => {
+      //Add the recent count with the database count;
+      temp.left = data.left + parseInt(localStorage.getItem("left"));
+      temp.right = data.right + parseInt(localStorage.getItem("right"));
+      temp.up = data.up + parseInt(localStorage.getItem("up"));
+      temp.down = data.down + parseInt(localStorage.getItem("down"));
+      console.log(temp)
+
+      //Update the data in the firebase database
+      const dbRef = ref(getDatabase());
+      const updates = {};
+      updates['logs'] = temp;
+      console.log("Updating data to database")
+    });
   }
+
+
 }
 
