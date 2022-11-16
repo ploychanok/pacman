@@ -62,6 +62,7 @@ export class Config {
     }
 
     btn.addEventListener('click', () => {
+      this.disableLogBtn(btn);
       this.fetchData()
       temp.left = data.left + parseInt(localStorage.getItem("left") || 0);
       temp.right = data.right + parseInt(localStorage.getItem("right") || 0);
@@ -81,6 +82,11 @@ export class Config {
         console.log("Updating data to database");
       }
     });
+  }
+
+  disableLogBtn(){
+    const logBtn = document.getElementById('logBtn');
+    logBtn.classList.add('disable');
   }
 
 
