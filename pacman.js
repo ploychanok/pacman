@@ -857,6 +857,7 @@ Pacman.Audio = function (game) {
       playing.push(name);
       files[name].addEventListener("ended", endEvents[name], true);
       files[name].play();
+      console.log('owair?');
     }
   }
 
@@ -972,7 +973,14 @@ var PACMAN = (function () {
     user.loseLife();
     if (user.getLives() > 0) {
       startLevel();
+    } else {
+      disableBtn();
     }
+  }
+
+  function disableBtn(){
+    const sentData = document.getElementById("sendData");
+    sentData.classList.remove('disable');
   }
 
   function setState(nState) {

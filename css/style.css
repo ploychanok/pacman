@@ -167,6 +167,11 @@ body {
   font-family: BDCartoonShoutRegular;
 }
 
+.disable {
+  cursor: not-allowed !important;
+  opacity: 0.3;
+}
+
 .logo {
   width: 100%;
   background-size: contain;
